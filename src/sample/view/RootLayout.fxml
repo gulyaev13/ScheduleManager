@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.MainController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="660.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="25.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="-Infinity" prefHeight="405.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="Настройки">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Настройки" onAction="#settingsItemPressed"/>
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Справка">
+            <items>
+              <MenuItem mnemonicParsing="false" text="О программе" onAction="#aboutItemPressed"/>
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+         <children>
+            <Button fx:id="createCalendarButton" layoutX="505.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createCalendarButtonPressed" prefHeight="25.0" prefWidth="130.0" text="Создать расписание" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="20.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>

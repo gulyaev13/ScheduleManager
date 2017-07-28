@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="378.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.TimeTableSettingsController">
+   <children>
+      <Button fx:id="okButton" mnemonicParsing="false" onAction="#okButtonPressed" text="Создать" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="100.0" />
+      <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelButtonPressed" text="Отмена" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+      <MenuButton fx:id="menuButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="170.0" text="Выберите систему" AnchorPane.leftAnchor="381.0" AnchorPane.topAnchor="20.0">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#setRoundSystem" text="Круговая система" />
+          <MenuItem mnemonicParsing="false" onAction="#setOlympicSystem" text="Олимпийская система" />
+        </items>
+      </MenuButton>
+      <GridPane hgap="10.0" prefHeight="141.0" prefWidth="324.0" vgap="15.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="21.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="240.0" />
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="137.0" minWidth="11.0" prefWidth="72.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="gamesWithAllField" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="58.0" GridPane.columnIndex="1" />
+            <TextField fx:id="gamesInConferenceField" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="gamesInDivisionsField" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label prefHeight="25.0" prefWidth="213.0" text="Количество игр со всеми командами" />
+            <Label prefHeight="25.0" prefWidth="213.0" text="Количество игр внутри конференции" GridPane.rowIndex="1" />
+            <Label prefHeight="25.0" prefWidth="200.0" text="Количество игр внутри дивизиона" GridPane.rowIndex="2" />
+            <Label text="Название турнира:" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <Label prefHeight="25.0" prefWidth="90.0" text="Сохранить как:" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="50.0" />
+      <TextField fx:id="filePathField" prefHeight="25.0" prefWidth="235.0" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="140.0" />
+      <Button mnemonicParsing="false" onAction="#browseButtonPressed" prefHeight="25.0" prefWidth="58.0" text="Обзор" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="381.0" />
+      <TextArea fx:id="championshipNameArea" layoutX="14.0" layoutY="172.0" prefHeight="95.0" prefWidth="389.0" AnchorPane.leftAnchor="50.0" />
+   </children>
+</AnchorPane>
